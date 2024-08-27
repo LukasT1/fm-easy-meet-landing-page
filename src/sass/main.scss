@@ -4,9 +4,10 @@
 @use "base/mixins";
 @use "base/typography";
 
-@use "components/_buttons";
+@use "components/buttons";
+@use "components/number";
 
-@use "layout/_nav";
-@use "layout/_header";
-@use "layout/_main";
+@use "layout/nav";
+@use "layout/header";
+@use "layout/content";
 @use "layout/_footer";

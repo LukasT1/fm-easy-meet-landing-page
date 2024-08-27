@@ -1,7 +1,7 @@
 {
-  "name": "2024-08-07-skilled-e-learning-landing-page",
+  "name": "2024-08-26-meet-learning-landing-page",
   "version": "1.0.0",
-  "description": "Landing page for Workit",
+  "description": "Landing page for Meet",
   "main": "src/index.html",
   "scripts": {
     "compile:sass": "sass src/sass/main.scss src/style.css",

@@ -1,0 +1,21 @@
+button {
+  border: none;
+  border-radius: 2.9rem;
+  padding: var(--200) var(--400);
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.btn-blue {
+  background-color: var(--cyan-600);
+  &:hover {
+    background-color: #71c0d4;
+  }
+}
+
+.btn-purple {
+  background-color: var(--purple-600);
+  &:hover {
+    background-color: #b18bdd;
+  }
+}
