@@ -4,6 +4,7 @@ button {
   padding: var(--200) var(--400);
   color: var(--white);
   white-space: nowrap;
+  transition: all 0.3s;
 }
 
 .btn-blue {

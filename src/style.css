@@ -119,12 +119,24 @@ p,
   color: var(--purple-300);
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1) translateX(-50%);
+  }
+  50% {
+    transform: scale(1.25) translateX(-50%);
+  }
+  100% {
+    transform: scale(1) translateX(-50%);
+  }
+}
 button {
   border: none;
   border-radius: 2.9rem;
   padding: var(--200) var(--400);
   color: var(--white);
   white-space: nowrap;
+  transition: all 0.3s;
 }
 
 .btn-blue {
@@ -142,11 +154,15 @@ button {
 }
 
 .number {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--slate-600);
   z-index: 50;
+}
+.number:hover {
+  animation: pulse 1.1s ease-in-out infinite;
 }
 .number::before {
   content: "";
@@ -202,9 +218,16 @@ button {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 3.2rem;
 }
-.content__number {
+.content__number-wrapper {
+  position: relative;
   grid-column: 1/-1;
   padding-top: 7rem;
+}
+.content__number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .content__text {
   display: grid;
@@ -233,10 +256,14 @@ button {
   grid-column: 1/-1;
 }
 .content__slideshow > * {
-  display: flex;
-  flex-flow: row nowrap;
   max-width: 100%;
   height: auto;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+.content__slideshow > *:hover {
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .footer {
@@ -257,6 +284,7 @@ button {
   position: absolute;
   top: 0%;
   left: 50%;
+  transform: translateX(-50%);
 }
 .footer__heading {
   grid-column: 1/2;
