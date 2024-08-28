@@ -1,6 +1,15 @@
+@use "../base/variables";
+
 .nav {
   padding: var(--1000);
   padding-bottom: 0;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: variables.$bp-tablet) {
+  .nav {
+    padding: var(--500) var(--1000);
+    padding-bottom: 0;
+  }
 }

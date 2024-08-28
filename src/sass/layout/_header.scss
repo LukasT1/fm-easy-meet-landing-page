@@ -1,7 +1,19 @@
+@use "../base/variables";
+
 .hero {
   padding: var(--800) 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  &__image--left {
+    justify-self: start;
+  }
+
+  &__image--right {
+    justify-self: end;
+  }
+
   &__content {
     padding: 0 var(--400);
     display: flex;
@@ -22,36 +34,47 @@
   }
 }
 
-// display: grid;
-// grid-template-columns: subgrid;
-// grid-column: 1 / -1;
-// padding: var(--800) 0;
+@media (max-width: variables.$bp-tablet) {
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.2rem;
 
-// &__image--left {
-//   width: 100%;
-//   grid-column: 1 / 4;
-// }
+    &__image--left {
+      grid-column: 1/ -1;
+      justify-self: center;
+    }
 
-// &__image--right {
-//   width: 100%;
-//   grid-column: 10 / -1;
-// }
+    &__image--right {
+      display: none;
+    }
 
-// &__content {
-//   grid-column: 5 / 9;
-//   display: flex;
-//   flex-direction: column;
-//   row-gap: var(--400);
-//   text-align: center;
+    &__content {
+      max-width: 80%;
+      justify-self: center;
+      padding-top: var(--900);
 
-//   &-text {
-//     color: var(--slate-600);
-//   }
+      row-gap: var(--300);
+      grid-row: 2;
+      grid-column: 1 / -1;
+    }
+  }
+}
 
-//   &-buttons {
-//     display: flex;
-//     flex-direction: row;
-//     column-gap: 1.7rem;
-//     justify-content: center;
-//   }
-// }
+@media (max-width: variables.$bp-mobile) {
+  .hero {
+    &__image--left {
+      max-width: 110%;
+      width: 105%;
+    }
+
+    &__content {
+      max-width: 100%;
+
+      &-buttons {
+        flex-direction: column;
+        row-gap: var(--200);
+        align-items: center;
+      }
+    }
+  }
+}

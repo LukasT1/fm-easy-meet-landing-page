@@ -26,13 +26,22 @@
         <img src="assets/logo.svg" alt="" class="nav__logo" />
       </nav>
       <header class="hero">
-        <img
-          src="assets/desktop/image-hero-left.png"
-          alt=""
-          class="hero__image--left"
-        />
-        <div class="hero__content">
-          <h1 class="hero__content-heading">Group Chat For Everyone</h1>
+        <picture class="hero__image--left">
+          <!-- Image for larger screens from 900px up -->
+          <source
+            srcset="assets/desktop/image-hero-left.png"
+            media="(min-width: 56.25em)">
+                 <!-- Image for tablet and mobile screens under 900px-->
+                 <source
+                 srcset="assets/tablet/image-hero.png"
+                 media="(max-width: 56.25em)">            
+                 
+
+
+            <img src="assets/desktop/image-hero-left.png" alt="Picture of Meet users.">
+            </picture>
+                <div class="hero__content">
+          <h1 class="hero__content-heading">Group Chat<br />for Everyone</h1>
           <p class="hero__content-text text-4">
             Meet makes it easy to connect with others face-to-face virtually and
             collaborate across any device.
@@ -44,11 +53,15 @@
             <button class="btn-purple text-5">What is it?</button>
           </div>
         </div>
-        <img
-          src="assets/desktop/image-hero-right.png"
-          alt=""
-          class="hero__image--right"
-        />
+        <picture class="hero__image--right">
+          <source
+            srcset="assets/desktop/image-hero-right.png 394w"
+                    media="(min-width: 56.25em)"
+            />
+            
+            <img src="assets/desktop/image-hero-right.png" width="394px" height="auto" alt="Users of Meet"
+            class="hero__img--right"/>
+          
       </header>
       <main class="content">
         <div class="content__number-wrapper">
