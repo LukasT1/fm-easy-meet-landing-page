@@ -8,6 +8,7 @@
     "watch:sass": "sass src/sass/main.scss src/style.css -w",
     "prefix:css": "postcss src/style.css --output dist/style.prefix.css",
     "minify:css": "postcss dist/style.prefix.css --use cssnano --output dist/style.css",
+    "minify-final:css": "postcss dist/style.css --use cssnano --output dist/style.css",
     "copy-html": "cp src/index.html dist/index.html",
     "devserver": "live-server src --browser=chrome",
     "start": "npm-run-all --parallel devserver watch:sass",
