@@ -85,6 +85,7 @@ h1,
 .text-1 {
   font-size: 6.4rem;
   line-height: 110%;
+  font-weight: 900;
 }
 @media (min-width: 56.25em) {
   h1,
