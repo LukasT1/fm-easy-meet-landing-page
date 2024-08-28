@@ -75,7 +75,6 @@ body {
 
 body {
   font-family: "Red Hat Display", sans-serif;
-  font-weight: 900;
   letter-spacing: 0px;
   color: var(--slate-900);
   text-wrap: pretty;
@@ -85,6 +84,7 @@ h1,
 .text-1 {
   font-size: 6.4rem;
   line-height: 110%;
+  font-weight: 900;
 }
 @media (min-width: 56.25em) {
   h1,
